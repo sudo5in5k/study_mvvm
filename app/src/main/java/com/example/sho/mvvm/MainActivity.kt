@@ -2,6 +2,7 @@ package com.example.sho.mvvm
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v4.app.FragmentTransaction
 import android.util.Log
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -12,6 +13,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
         Log.d("ushi_debug", "onCreate")
 
         count_button.apply {
@@ -22,6 +24,12 @@ class MainActivity : AppCompatActivity() {
                 text = count.toString()
             }
         }
+
+        if (savedInstanceState == null) {
+            val trans: FragmentTransaction = supportFragmentManager.beginTransaction()
+            trans.add(R.id.fragment_container, SampleFragment(), "").commit()
+        }
+
     }
 
     override fun onSaveInstanceState(outState: Bundle?) {
