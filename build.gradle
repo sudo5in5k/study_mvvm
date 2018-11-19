@@ -5,7 +5,8 @@ buildscript {
     ext.versions = [
             'kotlin': '1.1.51',
             'retrofit': '2.4.0',
-            'lifecycle': '1.1.1'
+            'lifecycle': '1.1.1',
+            'dagger2': '2.11'
     ]
 
 
