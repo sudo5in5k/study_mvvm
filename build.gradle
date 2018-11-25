@@ -6,7 +6,10 @@ buildscript {
             'kotlin': '1.1.51',
             'retrofit': '2.4.0',
             'lifecycle': '1.1.1',
-            'dagger2': '2.11'
+            'dagger2': '2.11',
+            'rxkotlin': '1.0.0',
+            'rxandroid': '1.2.1',
+            'rxbinding': '1.0.1'
     ]
 
 

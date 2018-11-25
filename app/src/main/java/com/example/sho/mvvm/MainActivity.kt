@@ -1,9 +1,12 @@
 package com.example.sho.mvvm
 
-import android.support.v7.app.AppCompatActivity
+import android.content.Intent
 import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
 import com.example.sho.mvvm.dagger.ChocolateCake
 import com.example.sho.mvvm.dagger.DaggerCakeComponent
+import com.example.sho.mvvm.rxkotlin.LoginActivity
+import kotlinx.android.synthetic.main.activity_main.*
 import javax.inject.Inject
 
 class MainActivity : AppCompatActivity() {
@@ -16,5 +19,9 @@ class MainActivity : AppCompatActivity() {
 
         DaggerCakeComponent.create().inject(this)
         this.cake.make()
+
+        to_login_activity.setOnClickListener {
+            startActivity(Intent(this, LoginActivity::class.java))
+        }
     }
 }
