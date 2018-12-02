@@ -35,7 +35,7 @@ dependencies {
     implementation "android.arch.lifecycle:runtime:${versions.lifecycle}"
     implementation "android.arch.lifecycle:extensions:${versions.lifecycle}"
     implementation "com.squareup.retrofit2:retrofit:${versions.retrofit}"
-    implementation "com.squareup.retrofit2:adapter-rxjava2:${versions.retrofit}"
+    implementation "com.squareup.retrofit2:adapter-rxjava:${versions.retrofit}"
     implementation "com.squareup.retrofit2:converter-moshi:${versions.retrofit}"
     kapt 'android.arch.lifecycle:compiler:1.0.0'
 

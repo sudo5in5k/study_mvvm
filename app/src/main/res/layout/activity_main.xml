@@ -7,9 +7,16 @@
 
     <Button
         android:id="@+id/to_login_activity"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="toLoginActivity" />
+
+    <Button
+        android:layout_below="@id/to_login_activity"
+        android:id="@+id/to_qiita_list_fragment"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:text="toLoginActivity" />
+        android:text="toQiitaListFragment" />
 
 </RelativeLayout>

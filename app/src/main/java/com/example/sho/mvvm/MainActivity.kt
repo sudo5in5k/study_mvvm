@@ -6,12 +6,15 @@ import android.support.v7.app.AppCompatActivity
 import com.example.sho.mvvm.dagger.ChocolateCake
 import com.example.sho.mvvm.dagger.DaggerCakeComponent
 import com.example.sho.mvvm.rxkotlin.LoginActivity
+import com.example.sho.mvvm.rxkotlin.QiitaActivity
+import com.example.sho.mvvm.rxkotlin.QiitaListFragment
 import kotlinx.android.synthetic.main.activity_main.*
 import javax.inject.Inject
 
 class MainActivity : AppCompatActivity() {
 
-    @Inject lateinit var cake: ChocolateCake
+    @Inject
+    lateinit var cake: ChocolateCake
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,5 +26,10 @@ class MainActivity : AppCompatActivity() {
         to_login_activity.setOnClickListener {
             startActivity(Intent(this, LoginActivity::class.java))
         }
+
+        to_qiita_list_fragment.setOnClickListener {
+            startActivity(Intent(this, QiitaActivity::class.java))
+        }
+
     }
 }
