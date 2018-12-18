@@ -9,10 +9,11 @@ import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import com.example.sho.mvvm.R
 import com.example.sho.mvvm.rxkotlin.retrofit.QiitaClient
+import com.example.sho.mvvm.rxkotlin.retrofit.QiitaItemResponse
+import io.reactivex.android.schedulers.AndroidSchedulers
+import io.reactivex.disposables.Disposable
+import io.reactivex.schedulers.Schedulers
 import kotlinx.android.synthetic.main.fragment_qiita_list.*
-import rx.Subscription
-import rx.android.schedulers.AndroidSchedulers
-import rx.schedulers.Schedulers
 
 class QiitaListFragment : Fragment() {
 
@@ -27,16 +28,16 @@ class QiitaListFragment : Fragment() {
         qiita_list.adapter = adapter
     }
 
-    private fun subscribe(adapter: ArrayAdapter<String>): Subscription? {
-        return QiitaClient.client().items().subscribeOn(Schedulers.newThread())
+    private fun subscribe(adapter: ArrayAdapter<String>): Disposable {
+        return QiitaClient.client().items()
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe({ item ->
-                    item.forEach {
+                .subscribe({ t: Array<QiitaItemResponse>? ->
+                    t?.forEach {
                         adapter.add(it.title)
                     }
                 }, { e ->
-                    Log.e("ushi_debug_error", e.message)
+                    Log.d("ushi_debug_error", e.message)
                 })
     }
 }

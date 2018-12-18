@@ -1,7 +1,7 @@
 package com.example.sho.mvvm.rxkotlin.retrofit
 
+import io.reactivex.Observable
 import retrofit2.http.GET
-import rx.Observable
 
 interface QiitaItemService {
 

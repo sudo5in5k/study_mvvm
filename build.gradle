@@ -5,11 +5,12 @@ buildscript {
     ext.versions = [
             'kotlin': '1.2.51',
             'retrofit': '2.4.0',
+            'retrofit_rxjava2_adapter': '1.0.0',
             'lifecycle': '1.1.1',
             'dagger2': '2.11',
-            'rxkotlin': '1.0.0',
-            'rxandroid': '1.2.1',
-            'rxbinding': '1.0.1'
+            'rxkotlin': '2.2.0',
+            'rxandroid': '2.0.1',
+            'rxbinding': '2.0.0'
     ]
 
 

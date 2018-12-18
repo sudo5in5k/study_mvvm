@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import com.example.sho.mvvm.dagger.ChocolateCake
 import com.example.sho.mvvm.dagger.DaggerCakeComponent
+import com.example.sho.mvvm.rxkotlin.FlowableSample
 import com.example.sho.mvvm.rxkotlin.LoginActivity
 import com.example.sho.mvvm.rxkotlin.QiitaActivity
 import com.example.sho.mvvm.rxkotlin.QiitaListFragment
@@ -29,6 +30,10 @@ class MainActivity : AppCompatActivity() {
 
         to_qiita_list_fragment.setOnClickListener {
             startActivity(Intent(this, QiitaActivity::class.java))
+        }
+
+        flowable_sample.setOnClickListener {
+            FlowableSample.create()
         }
 
     }

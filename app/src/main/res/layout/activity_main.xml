@@ -12,11 +12,18 @@
         android:text="toLoginActivity" />
 
     <Button
-        android:layout_below="@id/to_login_activity"
         android:id="@+id/to_qiita_list_fragment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@id/to_login_activity"
         android:layout_centerInParent="true"
         android:text="toQiitaListFragment" />
+
+    <Button
+        android:id="@+id/flowable_sample"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/to_qiita_list_fragment"
+        android:text="flowable sample" />
 
 </RelativeLayout>
