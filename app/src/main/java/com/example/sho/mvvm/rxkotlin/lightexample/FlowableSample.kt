@@ -1,4 +1,4 @@
-package com.example.sho.mvvm.rxkotlin
+package com.example.sho.mvvm.rxkotlin.lightexample
 
 import android.util.Log
 import io.reactivex.BackpressureStrategy
@@ -25,7 +25,7 @@ object FlowableSample {
         }, BackpressureStrategy.BUFFER)
 
         flowable.observeOn(Schedulers.computation())
-                .subscribe(object: Subscriber<String> {
+                .subscribe(object : Subscriber<String> {
 
                     private var subscription: Subscription? = null
 

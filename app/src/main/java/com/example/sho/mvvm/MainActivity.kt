@@ -5,10 +5,11 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import com.example.sho.mvvm.dagger.ChocolateCake
 import com.example.sho.mvvm.dagger.DaggerCakeComponent
-import com.example.sho.mvvm.rxkotlin.FlowableSample
 import com.example.sho.mvvm.rxkotlin.LoginActivity
 import com.example.sho.mvvm.rxkotlin.QiitaActivity
-import com.example.sho.mvvm.rxkotlin.QiitaListFragment
+import com.example.sho.mvvm.rxkotlin.lightexample.FlowableCanCancelSample
+import com.example.sho.mvvm.rxkotlin.lightexample.FlowableSample
+import com.example.sho.mvvm.rxkotlin.lightexample.ObservableSample
 import kotlinx.android.synthetic.main.activity_main.*
 import javax.inject.Inject
 
@@ -34,6 +35,14 @@ class MainActivity : AppCompatActivity() {
 
         flowable_sample.setOnClickListener {
             FlowableSample.create()
+        }
+
+        flowable_cancel_sample.setOnClickListener {
+            FlowableCanCancelSample.create()
+        }
+
+        observable_sample.setOnClickListener {
+            ObservableSample.create()
         }
 
     }

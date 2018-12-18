@@ -26,4 +26,18 @@
         android:layout_below="@id/to_qiita_list_fragment"
         android:text="flowable sample" />
 
+    <Button
+        android:id="@+id/flowable_cancel_sample"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/flowable_sample"
+        android:text="cancel flowable sample" />
+
+    <Button
+        android:id="@+id/observable_sample"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/flowable_cancel_sample"
+        android:text="observable sample" />
+
 </RelativeLayout>
