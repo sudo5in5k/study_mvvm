@@ -7,6 +7,7 @@ import com.example.sho.mvvm.dagger.ChocolateCake
 import com.example.sho.mvvm.dagger.DaggerCakeComponent
 import com.example.sho.mvvm.rxkotlin.LoginActivity
 import com.example.sho.mvvm.rxkotlin.QiitaActivity
+import com.example.sho.mvvm.rxkotlin.lightexample.CompletableSample
 import com.example.sho.mvvm.rxkotlin.lightexample.FlowableCanCancelSample
 import com.example.sho.mvvm.rxkotlin.lightexample.FlowableSample
 import com.example.sho.mvvm.rxkotlin.lightexample.ObservableSample
@@ -43,6 +44,10 @@ class MainActivity : AppCompatActivity() {
 
         observable_sample.setOnClickListener {
             ObservableSample.create()
+        }
+
+        completable_sample.setOnClickListener {
+            CompletableSample.create(this)
         }
 
     }

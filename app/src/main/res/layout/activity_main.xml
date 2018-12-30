@@ -40,4 +40,11 @@
         android:layout_below="@id/flowable_cancel_sample"
         android:text="observable sample" />
 
+    <Button
+        android:id="@+id/completable_sample"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/observable_sample"
+        android:text="completable sample"/>
+
 </RelativeLayout>
